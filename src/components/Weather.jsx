@@ -17,8 +17,13 @@ function Weather() {
             setweather(success.data.weather[0].main)
             settemperature(success.data.main.temp)
             setdesc(success.data.weather[0].description)
+        }).catch(function(failure){
+            console.log(failure)
+            alert("Please Enter a Valid City Name")
         })
-    }
+
+        }
+    
     return (
         <div className="min-h-screen bg-linear-to-br from-blue-500 via-sky-400 to-cyan-300 flex items-center justify-center p-6">
             <div className="w-full max-w-md bg-white/20 backdrop-blur-lg rounded-3xl shadow-2xl border border-white/30 p-8">
